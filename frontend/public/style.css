@@ -1,0 +1,180 @@
+:root {
+    --main-bg-color: rgb(241, 218, 210);
+    --second-bg-color: fuchsia;
+    --third-bg-color: #EFEDEE;
+  
+    --main-font-color: fuchsia;
+    --second-font-color: rgb(252, 204, 248);
+    --third-font-color: #e2b0e9;
+  
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%; 
+  }
+  
+  body {
+    height: 100%;
+    font: 1.6rem 'Mukta', sans-serif;
+    margin: 0;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+  }
+  
+  a {
+    color: var(--main-font-color);
+    text-decoration: none;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header'
+      'main'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 1fr 8rem;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+  }
+  
+  header {
+    grid-area: header;
+    color: var(--main-font-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  header a {
+    color: var(--main-font-color);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .brand a {
+    font-size: 3rem;
+  }
+  
+  .perfumes {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .perfumes li {
+    margin: 3rem;
+  }
+  
+  .perfume {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: var(--third-bg-color);
+    box-shadow: 0 0.5rem 1rem rgba(212, 1, 212, 0.555);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .perfume img {
+    max-height: 26rem;
+  }
+  
+  .perfume-name {
+    line-height: 2.2rem;
+  }
+  
+  .perfume-brand {
+    font-size: 1.2rem;
+    color: var(--third-font-color);
+  }
+  
+  .perfume-price {
+    font-size: 2rem;
+  }
+  
+  footer {
+    background: var(--second-bg-color);
+    color: var(--second-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rating{
+    color:fuchsia;
+    font-size:1.2rem;
+  }
+  .rating span :last-child{
+    color:fuchsia;
+    font-size:1.2rem;
+  }
+  .content {
+    padding: 1rem;
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .details-image {
+    flex: 2 1 60rem;
+  }
+  .details-image img {
+    max-width: 60rem;
+    width: 100%;
+  }
+  .details-info,
+.details-action {
+  flex: 1 1 30rem;
+}
+.details-info h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.details-info div,
+.details-action div {
+  margin-bottom: 1rem;
+}
+.details-action {
+  border: 0.1rem #ff62dd solid;
+  border-radius: 0.5rem;
+  background: #f5d8ef;
+  padding: 1rem;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form-itens {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 34em;
+  border: 0.05rem #f5d8ef solid;
+  border-radius: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.title-form {
+  font-size: 2.5rem;
+}
